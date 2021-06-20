@@ -1,2 +1,2 @@
 # HTML_Website_Project
-This repository contains my first HTML website.
+This repository contains various HTML and CSS website Projects.
