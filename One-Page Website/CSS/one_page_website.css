@@ -3,13 +3,25 @@ html {
     font-size: 1.5em;
     text-align: center;
     position: relative;
+    color: royalblue;
 }
 
 .wrap {
-    border:5px goldenrod;
+    border:5px #BC8702;
     border-radius: 8px;
     margin: auto;
     width: 20%;
     border-style: double;
     padding: 10px;
+    box-shadow: 2px 2px 3px #E9B42F;
+}
+
+input {
+    border:2px #BC8702;
+    border-radius: 8px;
+    margin: auto;
+    width: 70%;
+    border-style: solid;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #E9B42F;
 }
