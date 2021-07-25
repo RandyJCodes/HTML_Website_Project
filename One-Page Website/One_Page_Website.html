@@ -4,6 +4,7 @@
 		<title>One Page Website</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="JS/One_Page_Website.js" defer></script>
 	</head>
 	<body>
 	
@@ -18,7 +19,7 @@
 			</ul>
 		</div>
 	</nav>
-	<!-- End NAV -->
+	
 	
 	<!-- Photos -->
 	<section id="photos">
@@ -26,7 +27,7 @@
 			<!-- PHOTO-CONTAINER 1 -->
 			<div class="photo-container">
 				<div class="photo">
-					<img src="./images/RE8.PNG" alt="Snow">
+					<img onclick="openModal();currentSlide(1)" src="./images/RE8.PNG" alt="Snow">
 					<div class="photo-overlay">
 					</div>
 				</div>
@@ -38,33 +39,57 @@
 			<!-- PHOTO-CONTAINER 2 -->
 			<div class="photo-container">
 				<div class="photo">
-					<img src="./images/SKYRIM.PNG" alt="Dragon">
+					<img onclick="openModal();currentSlide(2)" src="./images/SKYRIM.PNG" class="hover-shadow" alt="Dragon">
 					<div class="photo-overlay">
 					</div>
 				</div>
 			</div>
 		</div>
+		
 		<!-- END PHOTO-CONTAINTER 2 -->
 		
-		<div class="flex-container">
-			<!-- PHOTO-CONTAINER 3 -->
-			<div class="photo-container">
-				<div class="photo">
-					<img src="" alt="missing file">
-					<div class="photo-overlay">
-					</div>
-				</div>
-			</div>
+
+	<!-- Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+	  
+		  <div class="mySlides">
+			<div class="numbertext">1 / 2</div>
+			<img src="./images/RE8.PNG" style="width:100%" alt="RE8">
+		  </div>
+	  
+		  <div class="mySlides">
+			<div class="numbertext">2 / 2</div>
+			<img src="./images/SKYRIM.PNG" style="width:100%" alt="SKYRIM">
+		  </div>
+	  
 		</div>
-	</section>
-	<!-- END PHOTO-CONTAINTER 3 -->
-	
+	</div>
+
+	<!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<!-- Caption in lightbox -->
+	<div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+
+	<!-- Thumbnail image controls -->
+	<div class="column">
+		<img class="demo" src="./images/RE8.PNG" onclick="currentSlide(1)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./images/SKYRIM.PNG" onclick="currentSlide(2)" alt="Snow">
+	  </div>
+  	
 	<!-- Video -->
 	<section id="videos">
 		<iframe width="1920" height="1080" src="https://www.youtube.com/embed/watch?v=hOwTj7V3_3M">
 		</iframe>
 	</section>
-	<!-- End of Video -->
+	
 	
 	<!-- Contact Me form -->
 	<section id="contact"></section>	
@@ -75,15 +100,17 @@
 				<label for="lname">Last name:</label><br>
 				<input type="text" id="lname" value=""><br><br>
 				<label for="message">Message Me:</label><br>
-				<input type="text" id="lname" value=""><br><br>
+				<input type="text" id="message" value=""><br><br>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
 	</section>
 	
-	<!-- End of Contact Me form -->
+	
 	
 	</body>
+	
+	
 	<footer>
 	<!-- NAV 2 -->
 	<nav>
@@ -96,6 +123,6 @@
 			</ul>
 		</div>
 	</nav>
-	<!-- End NAV 2 -->
+	
 	</footer>
 </html>
